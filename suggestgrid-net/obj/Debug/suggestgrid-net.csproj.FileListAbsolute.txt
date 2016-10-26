@@ -1,0 +1,8 @@
+c:\users\testing\documents\visual studio 2015\Projects\suggestgrid-net\suggestgrid-net\obj\Debug\suggestgrid-net.csprojResolveAssemblyReference.cache
+C:\Users\testing\Documents\Visual Studio 2015\Projects\suggestgrid-net\suggestgrid-net\bin\Debug\suggestgrid-net.dll
+C:\Users\testing\Documents\Visual Studio 2015\Projects\suggestgrid-net\suggestgrid-net\bin\Debug\suggestgrid-net.pdb
+C:\Users\testing\Documents\Visual Studio 2015\Projects\suggestgrid-net\suggestgrid-net\bin\Debug\Newtonsoft.Json.dll
+C:\Users\testing\Documents\Visual Studio 2015\Projects\suggestgrid-net\suggestgrid-net\bin\Debug\unirest-net.dll
+C:\Users\testing\Documents\Visual Studio 2015\Projects\suggestgrid-net\suggestgrid-net\bin\Debug\Newtonsoft.Json.xml
+C:\Users\testing\Documents\Visual Studio 2015\Projects\suggestgrid-net\suggestgrid-net\obj\Debug\suggestgrid-net.dll
+C:\Users\testing\Documents\Visual Studio 2015\Projects\suggestgrid-net\suggestgrid-net\obj\Debug\suggestgrid-net.pdb

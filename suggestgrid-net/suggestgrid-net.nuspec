@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>SuggestGrid</id>
+    <version>0.1.21.6</version>
+    <title>SuggestGrid</title>
+    <authors>SuggestGrid</authors>
+    <iconUrl>https://nuget.org/Content/Images/packageDefaultIcon-50x50.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>SuggestGrid is a recommendation and personalization service.</description>
+    <summary />
+    <releaseNotes />
+    <copyright>Copyright 2016</copyright>
+    <language>en-US</language>
+    <dependencies>
+      <dependency id="Unirest-APIMATIC" version="1.0.1.26" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="bin\Release\SuggestGrid.dll" target="lib\net45" />
+  </files>
+</package>

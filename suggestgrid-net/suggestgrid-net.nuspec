@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
   <metadata>
     <id>SuggestGrid</id>
-    <version>0.1.21.7</version>
+    <version>0.1.21.8</version>
     <title>SuggestGrid</title>
     <authors>SuggestGrid</authors>
     <iconUrl>https://nuget.org/Content/Images/packageDefaultIcon-50x50.png</iconUrl>
@@ -19,5 +19,6 @@
   </metadata>
   <files>
     <file src="bin\Release\SuggestGrid.dll" target="lib\net45" />
+    <file src="bin\Release\SuggestGrid.pdb" target="lib\net45" />
   </files>
 </package>

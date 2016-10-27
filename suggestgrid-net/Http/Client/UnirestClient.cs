@@ -30,10 +30,17 @@ namespace SuggestGrid.Http.Client
 
         public HttpResponse ExecuteAsString(HttpRequest request)
         {
+            Task<HttpResponse> t = ExecuteAsStringAsync(request);
+            Task.WaitAll(t);
+            return t.Result;
+        }
+
+        public async Task<HttpResponse> ExecuteAsStringAsync(HttpRequest request)
+        {
             //raise the on before request event
             raiseOnBeforeHttpRequestEvent(request);
 
-            HttpResponse response = null;
+            HttpResponse response;
 
             using (var client = new HttpClient())
             {
@@ -44,21 +51,21 @@ namespace SuggestGrid.Http.Client
 
                 if (request.HttpMethod.Equals(HttpMethod.POST))
                 {
-                    StringContent content = new StringContent(request.Body, Encoding.UTF8, "application/json");
-                    responseMessage = client.PostAsync(request.QueryUrl, content).Result;
+                    StringContent content = new StringContent(request.Body ?? String.Empty, Encoding.UTF8, "application/json");
+                    responseMessage = await client.PostAsync(request.QueryUrl, content);
                 }
                 else if (request.HttpMethod.Equals(HttpMethod.GET))
                 {
-                    responseMessage = client.GetAsync(request.QueryUrl).Result;
+                    responseMessage = await client.GetAsync(request.QueryUrl);
                 }
                 else if (request.HttpMethod.Equals(HttpMethod.DELETE))
                 {
-                    responseMessage = client.DeleteAsync(request.QueryUrl).Result;
+                    responseMessage = await client.DeleteAsync(request.QueryUrl);
                 }
                 else if (request.HttpMethod.Equals(HttpMethod.PUT))
                 {
-                    StringContent content = new StringContent(request.Body, Encoding.UTF8, "application/json");
-                    responseMessage = client.PutAsync(request.QueryUrl, content).Result;
+                    StringContent content = new StringContent(request.Body ?? String.Empty, Encoding.UTF8, "application/json");
+                    responseMessage = await client.PutAsync(request.QueryUrl, content);
                 }
                 else
                 {
@@ -68,8 +75,8 @@ namespace SuggestGrid.Http.Client
                 response = new HttpStringResponse
                 {
                     Headers = responseMessage.Headers.ToDictionary(l => l.Key, k => k.Value.First()),
-                    RawBody = responseMessage.Content.ReadAsStreamAsync().Result,
-                    Body = responseMessage.Content.ReadAsStringAsync().Result,
+                    RawBody = await responseMessage.Content.ReadAsStreamAsync(),
+                    Body = await responseMessage.Content.ReadAsStringAsync(),
                     StatusCode = (int)responseMessage.StatusCode
                 };
 
@@ -80,12 +87,14 @@ namespace SuggestGrid.Http.Client
             return response;
         }
 
-        public Task<HttpResponse> ExecuteAsStringAsync(HttpRequest request)
+        public HttpResponse ExecuteAsBinary(HttpRequest request)
         {
-            return Task.Factory.StartNew(() => ExecuteAsString(request));
+            Task<HttpResponse> t = ExecuteAsBinaryAsync(request);
+            Task.WaitAll(t);
+            return t.Result;
         }
 
-        public HttpResponse ExecuteAsBinary(HttpRequest request)
+        public async Task<HttpResponse> ExecuteAsBinaryAsync(HttpRequest request)
         {
             //raise the on before request event
             raiseOnBeforeHttpRequestEvent(request);
@@ -94,23 +103,23 @@ namespace SuggestGrid.Http.Client
 
             using (var client = new HttpClient())
             {
-                HttpResponseMessage responseMessage = null;
+                HttpResponseMessage responseMessage;
                 if (request.HttpMethod.Equals(HttpMethod.POST))
                 {
-                    StringContent content = new StringContent(request.Body, Encoding.UTF8, "application/json");
-                    responseMessage = client.PostAsync(request.QueryUrl, content).Result;
+                    StringContent content = new StringContent(request.Body ?? String.Empty, Encoding.UTF8, "application/json");
+                    responseMessage = await client.PostAsync(request.QueryUrl, content);
                 }
                 else if (request.HttpMethod.Equals(HttpMethod.GET))
                 {
-                    responseMessage = client.GetAsync(request.QueryUrl).Result;
+                    responseMessage = await client.GetAsync(request.QueryUrl);
                 }
                 else if (request.HttpMethod.Equals(HttpMethod.DELETE))
                 {
-                    responseMessage = client.DeleteAsync(request.QueryUrl).Result;
+                    responseMessage = await client.DeleteAsync(request.QueryUrl);
                 } else if (request.HttpMethod.Equals(HttpMethod.PUT))
                 {
-                    StringContent content = new StringContent(request.Body, Encoding.UTF8, "application/json");
-                    responseMessage = client.PutAsync(request.QueryUrl, content).Result;
+                    StringContent content = new StringContent(request.Body ?? String.Empty, Encoding.UTF8, "application/json");
+                    responseMessage = await client.PutAsync(request.QueryUrl, content);
                 }
                 else
                 {
@@ -120,7 +129,7 @@ namespace SuggestGrid.Http.Client
                 response = new HttpResponse
                 {
                     Headers = responseMessage.Headers.ToDictionary(l => l.Key, k => k.Value.First()),
-                    RawBody = responseMessage.Content.ReadAsStreamAsync().Result,
+                    RawBody = await responseMessage.Content.ReadAsStreamAsync(),
                     StatusCode = (int) responseMessage.StatusCode
                 };
                  
@@ -129,11 +138,6 @@ namespace SuggestGrid.Http.Client
             //raise the on after response event
             raiseOnAfterHttpResponseEvent(response);
             return response;
-        }
-
-        public Task<HttpResponse> ExecuteAsBinaryAsync(HttpRequest request)
-        {
-            return Task.Factory.StartNew(() => ExecuteAsString(request));
         }
 
         #endregion

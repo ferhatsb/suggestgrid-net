@@ -4,3 +4,9 @@ C:\Users\testing\Documents\Visual Studio 2015\Projects\suggestgrid-net\suggestgr
 C:\Users\testing\Documents\Visual Studio 2015\Projects\suggestgrid-net\suggestgrid-net\bin\Release\Newtonsoft.Json.xml
 C:\Users\testing\Documents\Visual Studio 2015\Projects\suggestgrid-net\suggestgrid-net\obj\Release\SuggestGrid.dll
 C:\Users\testing\Documents\Visual Studio 2015\Projects\suggestgrid-net\suggestgrid-net\obj\Release\SuggestGrid.pdb
+\\Mac\Home\Documents\Visual Studio 2015\Projects\suggestgrid-net\suggestgrid-net\bin\Release\SuggestGrid.dll
+\\Mac\Home\Documents\Visual Studio 2015\Projects\suggestgrid-net\suggestgrid-net\bin\Release\SuggestGrid.pdb
+\\Mac\Home\Documents\Visual Studio 2015\Projects\suggestgrid-net\suggestgrid-net\bin\Release\Newtonsoft.Json.dll
+\\Mac\Home\Documents\Visual Studio 2015\Projects\suggestgrid-net\suggestgrid-net\bin\Release\Newtonsoft.Json.xml
+\\Mac\Home\Documents\Visual Studio 2015\Projects\suggestgrid-net\suggestgrid-net\obj\Release\SuggestGrid.dll
+\\Mac\Home\Documents\Visual Studio 2015\Projects\suggestgrid-net\suggestgrid-net\obj\Release\SuggestGrid.pdb

@@ -5,3 +5,10 @@ C:\Users\testing\Documents\Visual Studio 2015\Projects\suggestgrid-net\suggestgr
 C:\Users\testing\Documents\Visual Studio 2015\Projects\suggestgrid-net\suggestgrid-net\bin\Debug\Newtonsoft.Json.xml
 C:\Users\testing\Documents\Visual Studio 2015\Projects\suggestgrid-net\suggestgrid-net\obj\Debug\SuggestGrid.dll
 C:\Users\testing\Documents\Visual Studio 2015\Projects\suggestgrid-net\suggestgrid-net\obj\Debug\SuggestGrid.pdb
+\\Mac\Home\Documents\Visual Studio 2015\Projects\suggestgrid-net\suggestgrid-net\bin\Debug\SuggestGrid.dll
+\\Mac\Home\Documents\Visual Studio 2015\Projects\suggestgrid-net\suggestgrid-net\bin\Debug\SuggestGrid.pdb
+\\Mac\Home\Documents\Visual Studio 2015\Projects\suggestgrid-net\suggestgrid-net\bin\Debug\Newtonsoft.Json.dll
+\\Mac\Home\Documents\Visual Studio 2015\Projects\suggestgrid-net\suggestgrid-net\bin\Debug\Newtonsoft.Json.xml
+\\Mac\Home\Documents\Visual Studio 2015\Projects\suggestgrid-net\suggestgrid-net\obj\Debug\SuggestGrid.csprojResolveAssemblyReference.cache
+\\Mac\Home\Documents\Visual Studio 2015\Projects\suggestgrid-net\suggestgrid-net\obj\Debug\SuggestGrid.dll
+\\Mac\Home\Documents\Visual Studio 2015\Projects\suggestgrid-net\suggestgrid-net\obj\Debug\SuggestGrid.pdb

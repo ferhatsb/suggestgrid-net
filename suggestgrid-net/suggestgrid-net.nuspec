@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>SuggestGrid</id>
+    <version>0.1.21.8</version>
+    <title>SuggestGrid</title>
+    <authors>SuggestGrid</authors>
+    <iconUrl>https://nuget.org/Content/Images/packageDefaultIcon-50x50.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>SuggestGrid is a recommendation and personalization service.</description>
+    <summary />
+    <releaseNotes />
+    <copyright>Copyright 2016</copyright>
+    <language>en-US</language>
+    <dependencies>
+      <dependency id="Newtonsoft.Json" version="9.0.1" />
+      <dependency id="System.Net.Http" version="4.1.0" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="bin\Release\SuggestGrid.dll" target="lib\net45" />
+    <file src="bin\Release\SuggestGrid.pdb" target="lib\net45" />
+  </files>
+</package>
